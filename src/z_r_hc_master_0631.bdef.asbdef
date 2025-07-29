@@ -1,0 +1,15 @@
+unmanaged implementation in class zbp_r_hc_master_0631 unique;
+strict ( 2 );
+
+define behavior for Z_R_HC_MASTER_0631 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) ENumber;
+  field( mandatory : create ) EName;
+}

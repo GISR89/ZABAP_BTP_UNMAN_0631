@@ -3,11 +3,13 @@
 @Metadata.ignorePropagatedAnnotations: true
 
 @Metadata.allowExtensions: true
+@Search.searchable: true 
 
 define root view entity Z_C_HC_MASTER_0631
   provider contract transactional_query
   as projection on Z_R_HC_MASTER_0631
 {
+  @Search.defaultSearchElement: true
   key ENumber,
       EName,
       EDepartment,

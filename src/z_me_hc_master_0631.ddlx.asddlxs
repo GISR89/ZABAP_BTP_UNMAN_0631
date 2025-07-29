@@ -1,46 +1,79 @@
 @Metadata.layer: #CORE
 
-@Search.searchable: true 
 @UI:{ headerInfo: {  typeName: 'Employee', 
-typeNamePlural: 'Employees', 
-title: { type: #STANDARD, 
-label: 'Employees', 
-value: 'EName' } } } 
+                     typeNamePlural: 'Employees', 
+                     title: { type: #STANDARD, 
+                     label: 'Employees', 
+                     value: 'EName' } } } 
 
 annotate entity Z_C_HC_MASTER_0631
     with 
 {
 
- 
 @UI.facet: [{ id: 'Employees', 
-purpose: #STANDARD, 
-type: #IDENTIFICATION_REFERENCE, 
-label: 'Employee', 
-position: 10 }] 
-@Search.defaultSearchElement: true 
-@UI: { 
-lineItem: [{ position: 10, label: 'Employee Number', 
-importance: #HIGH }], 
-identification: [{ position: 10, label: 'Employee Number' 
-}] } 
+              label: 'Employee', 
+              purpose: #STANDARD, 
+              type: #IDENTIFICATION_REFERENCE, 
+              position: 10 }] 
+              
 
+@UI: { lineItem: [{ position: 10, importance: #HIGH }], 
+       identification: [{ position: 10  }] } 
     ENumber;
-  //  EName;
- // EDepartment;
- // Status;
- // JobTitle;
- // StartDate;
- // EndDate;
- // Email;
- // MNumber;
- // MName;
- // MDepartment;
+
+@UI: { lineItem: [{ position: 20,  importance: #HIGH }], 
+       identification: [{ position: 20 }], 
+       selectionField: [{ position: 10 }] }    
+    EName;
+    
+@UI: { lineItem: [{ position: 30,  importance: #HIGH }], 
+       identification: [{ position: 30 }], 
+       selectionField: [{ position: 20 }] }     
+  EDepartment;
+  
+@UI: { lineItem: [{ position: 40,  importance: #MEDIUM }], 
+       identification: [{ position: 40 }], 
+       selectionField: [{ position: 30 }] }   
+  Status;
+  
+@UI: { lineItem: [{ position: 50,  importance: #MEDIUM }], 
+       identification: [{ position: 50 }], 
+       selectionField: [{ position: 40 }] }   
+  JobTitle;
+  
+@UI: { lineItem: [{ position: 60,  importance: #LOW }], 
+       identification: [{ position: 60 }] }   
+  StartDate;
+  
+@UI: { lineItem: [{ position: 70,  importance: #LOW }], 
+       identification: [{ position: 70 }] }   
+  EndDate;
+  
+@UI: { lineItem: [{ position: 80,  importance: #LOW }], 
+       identification: [{ position: 80 }] }   
+  Email;
+  
+@UI: { lineItem: [{ position: 90,  importance: #LOW }], 
+       identification: [{ position: 90 }]}   
+  MNumber;
+  
+@UI: { lineItem: [{ position: 100,  importance: #LOW }], 
+       identification: [{ position: 100 }] }   
+  MName;
+  
+@UI: { lineItem: [{ position: 1100,  importance: #LOW }], 
+       identification: [{ position: 110 }] }   
+  MDepartment;
+  
  @UI.hidden: true 
   CreaDateTime;
+  
   @UI.hidden: true 
   CreaUname;
+  
   @UI.hidden: true 
   LchgDateTime;
+  
   @UI.hidden: true 
   LchgUname;
     
