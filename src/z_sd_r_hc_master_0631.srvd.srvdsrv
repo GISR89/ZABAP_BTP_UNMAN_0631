@@ -1,4 +1,4 @@
 @EndUserText.label: 'Service Definition HC Master'
 define service Z_SD_R_HC_MASTER_0631 {
-  expose Z_R_HC_MASTER_0631;
+  expose Z_C_HC_MASTER_0631;
 }

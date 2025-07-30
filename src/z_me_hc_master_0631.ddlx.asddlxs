@@ -1,5 +1,5 @@
 @Metadata.layer: #CORE
-
+@Search.searchable: true
 @UI:{ headerInfo: {  typeName: 'Employee', 
                      typeNamePlural: 'Employees', 
                      title: { type: #STANDARD, 
@@ -16,53 +16,53 @@ annotate entity Z_C_HC_MASTER_0631
               type: #IDENTIFICATION_REFERENCE, 
               position: 10 }] 
               
-
-@UI: { lineItem: [{ position: 10, importance: #HIGH }], 
-       identification: [{ position: 10  }] } 
+@Search.defaultSearchElement: true
+@UI: { lineItem: [{ position: 10, label: 'ENumber', importance: #HIGH }], 
+       identification: [{ position: 10, label: 'ENumber' }] } 
     ENumber;
 
-@UI: { lineItem: [{ position: 20,  importance: #HIGH }], 
-       identification: [{ position: 20 }], 
+@UI: { lineItem: [{ position: 20, label: 'EName', importance: #HIGH }], 
+       identification: [{ position: 20, label: 'EName'}], 
        selectionField: [{ position: 10 }] }    
     EName;
     
-@UI: { lineItem: [{ position: 30,  importance: #HIGH }], 
-       identification: [{ position: 30 }], 
+@UI: { lineItem: [{ position: 30, label: 'EDepartment', importance: #HIGH }], 
+       identification: [{ position: 30, label: 'EDepartment'}], 
        selectionField: [{ position: 20 }] }     
   EDepartment;
   
-@UI: { lineItem: [{ position: 40,  importance: #MEDIUM }], 
-       identification: [{ position: 40 }], 
+@UI: { lineItem: [{ position: 40, label: 'Status', importance: #MEDIUM }], 
+       identification: [{ position: 40, label: 'Status' }], 
        selectionField: [{ position: 30 }] }   
   Status;
   
-@UI: { lineItem: [{ position: 50,  importance: #MEDIUM }], 
-       identification: [{ position: 50 }], 
+@UI: { lineItem: [{ position: 50, label: 'JobTitle', importance: #MEDIUM }], 
+       identification: [{ position: 50, label: 'JobTitle' }], 
        selectionField: [{ position: 40 }] }   
   JobTitle;
   
-@UI: { lineItem: [{ position: 60,  importance: #LOW }], 
-       identification: [{ position: 60 }] }   
+@UI: { lineItem: [{ position: 60, label: 'StartDate', importance: #LOW }], 
+       identification: [{ position: 60, label: 'StartDate' }] }   
   StartDate;
   
-@UI: { lineItem: [{ position: 70,  importance: #LOW }], 
-       identification: [{ position: 70 }] }   
+@UI: { lineItem: [{ position: 70, label: 'EndDate', importance: #LOW }], 
+       identification: [{ position: 70, label: 'EndDate' }] }   
   EndDate;
   
-@UI: { lineItem: [{ position: 80,  importance: #LOW }], 
-       identification: [{ position: 80 }] }   
+@UI: { lineItem: [{ position: 80, label: 'Email', importance: #LOW }], 
+       identification: [{ position: 80, label: 'Email' }] }   
   Email;
   
-@UI: { lineItem: [{ position: 90,  importance: #LOW }], 
-       identification: [{ position: 90 }]}   
+@UI: { lineItem: [{ position: 90, label: 'MNumber', importance: #LOW }], 
+       identification: [{ position: 90, label: 'MNumber' }]}   
   MNumber;
   
-@UI: { lineItem: [{ position: 100,  importance: #LOW }], 
-       identification: [{ position: 100 }] }   
+@UI: { lineItem: [{ position: 100, label: 'MName', importance: #LOW }], 
+       identification: [{ position: 100, label: 'MName' }] }   
   MName;
   
-@UI: { lineItem: [{ position: 1100,  importance: #LOW }], 
-       identification: [{ position: 110 }] }   
+@UI: { lineItem: [{ position: 110, label: 'MDepartment', importance: #LOW }], 
+       identification: [{ position: 110, label: 'MDepartment' }] }   
   MDepartment;
   
  @UI.hidden: true 

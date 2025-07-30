@@ -21,10 +21,10 @@ define root view entity Z_C_HC_MASTER_0631
       MNumber,
       MName,
       MDepartment,
-      @Semantics.user.createdBy: true
       CreaDateTime,
+     @Semantics.user.createdBy: true
       CreaUname,
-      @Semantics.user.lastChangedBy: true
       LchgDateTime,
+     @Semantics.user.lastChangedBy: true
       LchgUname
 }
